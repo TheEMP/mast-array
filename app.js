@@ -1,18 +1,20 @@
 //Write a function called cubed(x) that accepts an argument x and returns its cubed value
 function cubed(x) {
+    var m = x
     for (var i = 1; i < 3; i++) {
-        x *= 2 
+        m *= x 
     }
    
-    return x 
+    return m 
 }
 
 //write a function called power that accepts two args (base, exp) and returns the power  
 function getPower(b, x) {
+    var m = b
    for (var i = 1; i < x; i++) {
-        b *= 2    
+        m *= b   
     }
-    return b 
+    return m
 }
 /*
 * write a function called logArr that will log each item in an array
@@ -67,8 +69,7 @@ function findInstr(name){
 }
 //write a fn that accepts two arguments a (sentence, letter) have the function return the number of times that letter repeats in the sentence
 function findSCount(sentence, letter) {
-   var a = sentence.split(letter)
-   return a.length - 1;
+   return sentence.split(letter).length - 1;
 }
 
 /**
@@ -125,4 +126,5 @@ function inStock(id) {
             return p.quantity > 0
         }
     }
+    return {error:"Could not find product with specified id: "+id}
 }
